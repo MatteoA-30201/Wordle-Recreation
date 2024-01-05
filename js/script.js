@@ -63,18 +63,18 @@ function intialize() {
 function update() {
   let correct = 0;
   for (let c = 0; c < width; c++) {
-    let currentTile = document.getElementById(row.toString() + "-" + col.toString());
+    let currentTile = document.getElementById(row.toString() + "-" + c);
     let letter = currentTile.innerText;
 
     if (word[c] == letter) {
       currentTile.classList.add("correct");
-      correct += 1;
+      correct++;
     }
     else if (word.includes(letter)) {
       currentTile.classList.add("present");
     }
     else {
-      currentTile.classList.ass("absent");
+      currentTile.classList.add("absent");
     }
   }
 }
